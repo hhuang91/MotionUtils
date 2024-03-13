@@ -60,7 +60,7 @@ def integ_func(x, y):
   def f(xs):
     if len(y)==1:
       return y[0]*(xs - x[0])
-    I = P.searchsorted(x[1:].detach(), xs)
+    I = T.searchsorted(x[1:].detach(), xs)
     dx = (x[I+1]-x[I])
     hh = H_poly((xs-x[I])/dx)
     return Y[I] + dx*(
